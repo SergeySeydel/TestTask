@@ -52,13 +52,6 @@ class DB:
 db_all_birds: DB = noClass("birds")
 db_birds_which_i_saw: DB = noClass("birds_which_i_saw")
 
-
-
-
-
-
-
-
 def birds_screen(hashMap: hashMap, _files=None, _data=None):
     
 
@@ -153,9 +146,6 @@ def birds_screen(hashMap: hashMap, _files=None, _data=None):
         json.dumps(birds_cards, ensure_ascii=False)
     )
     return hashMap
-
-
-
 
 def add_bird_screen(hashMap: hashMap, _files=None, _data=None):
     
@@ -269,10 +259,6 @@ def remove_bird_info_from_hashMap(hashMap: hashMap):
     hashMap.remove("photo")
 
     return hashMap
-
-
-
-
 
 def show_birds_seen_screen(hashMap: hashMap, _files=None, _data=None):
     
@@ -426,9 +412,6 @@ def create_seen_birds(hashMap: hashMap, _files=None, _data=None):
 
     return hashMap
 
-
-
-
 def get_bird_data_for_saw(bird: str) -> dict:
 
     bird_data_str = db_birds_which_i_saw.get(bird)
@@ -455,6 +438,3 @@ def get_bird_data_for_saw(bird: str) -> dict:
     }
 
     return new_bird_data
-
-
-
